@@ -1,25 +1,37 @@
 {
   "expo": {
-    "name": "airtime",
+    "name": "Airtime",
     "slug": "airtime",
+    "scheme": "airtime",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0B0D12",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "dev.airtime.jump",
+      "infoPlist": {
+        "NSMotionUsageDescription": "Airtime uses the motion sensor to time your jump."
+      }
     },
     "android": {
+      "package": "dev.airtime.jump",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#0B0D12",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
+      "permissions": ["com.android.vending.BILLING"],
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router",
+      ["expo-build-properties", { "android": { "minSdkVersion": 24 } }]
+    ]
   }
 }
