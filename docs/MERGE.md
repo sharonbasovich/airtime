@@ -18,7 +18,7 @@ cd ../airtime-main && git checkout -b merge/independent-airtime
 # 2. bring this repo in as a remote and pull history into a subfolder, or copy directly
 git remote add indep ../airtime   # or the bundle: git remote add indep /path/airtime.bundle
 git fetch indep
-git checkout indep/main -- src/core src/purchases src/hooks/useJumpSensor.ts src/ui docs jest.config.js babel.config.js
+git checkout indep/master -- src/core src/purchases src/hooks/useJumpSensor.ts src/ui docs jest.config.js babel.config.js
 # 3. deps (SDK-matched)
 npx expo install react-native-purchases expo-sensors expo-haptics @react-native-async-storage/async-storage
 npx expo install babel-preset-expo jest @types/jest -- -D
@@ -26,3 +26,12 @@ npx expo install babel-preset-expo jest @types/jest -- -D
 npx jest && npx tsc --noEmit && npx expo lint
 ```
 Conflicts to decide by hand: whichever detector thresholds were tuned on a real phone (keep the real-device-tuned values, and rerun `detector.test.ts` against recorded traces), paywall styling, and the entitlement ID (this repo uses `pro`).
+
+## Publish to https://github.com/sharonbasovich/airtime (empty repo), from a GitHub-connected machine
+```bash
+git clone airtime.bundle airtime && cd airtime
+git remote set-url origin https://github.com/sharonbasovich/airtime.git
+git push -u origin master:main
+git bundle verify ../airtime.bundle   # optional integrity check
+```
+The bundle contains the full history on branch `master` (pushed as `main`). No secrets are in it: the RevenueCat key is read from `EXPO_PUBLIC_REVENUECAT_API_KEY` at build time.

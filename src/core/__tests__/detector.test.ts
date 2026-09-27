@@ -31,6 +31,7 @@ describe('rejections', () => {
   test('tiny hop below plausible flight time', () => {
     const samples = [
       ...still(60),
+      { t: 595, x: 0, y: 2, z: 0 },
       ...Array.from({ length: 10 }, (_, i) => ({ t: 600 + i * 10, x: 0, y: 0.05, z: 0 })),
       { t: 700, x: 0, y: 3, z: 0 },
     ];

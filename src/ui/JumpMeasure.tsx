@@ -48,6 +48,9 @@ export function JumpMeasure({ onResult }: { onResult: (r: JumpDetection, source:
               <Text style={s.unit}> cm</Text>
             </Text>
             <Text style={s.sub}>{Math.round(result.flightMs)} ms flight time · h = g·t²/8</Text>
+            <Text style={s.sub}>
+              push {result.pushPeakG.toFixed(1)} g · flight {result.flightMeanG.toFixed(2)} g · {Math.round(result.sampleHz)} Hz
+            </Text>
           </>
         ) : phase === 'rejected' ? (
           <>
