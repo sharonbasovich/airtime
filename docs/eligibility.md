@@ -18,6 +18,8 @@ Source: the official Shipaton 2026 rules and FAQ on Devpost (revenuecat-shipaton
 | New work per the rules' submission-period clause (verify wording) | git history of this repo (first commit Sep 2026) | entrant to confirm |
 | Meaningful RevenueCat SDK use | `react-native-purchases` 10.10: configure, getOfferings, purchasePackage, CustomerInfo listener, restore; `pro` entitlement gates the daily call (`src/purchases/`) | code done; live Test Store purchase **not yet run** (no key) |
 | Public open-source repository | https://github.com/sharonbasovich/airtime (public, MIT detected, `main` @ ae6a945) | done — fresh clone verified: 32/32 tests, lint, tsc, expo-doctor 21/21 |
+| App icon 1024×1024 | `assets/icon.png` | done — verified 1024×1024 |
+| Screenshot 1179×2556, no device frame | `docs/screenshots/submit-today-pro-1179x2556.png`, `docs/screenshots/submit-paywall-1179x2556.png` | done — raw `adb screencap` at override size 1179×2556 (no frame, no scaling); other docs images are 1080×2400 |
 | Demo video (public link) | emulator recording of `scripts/demo-android.sh` (DEMO adapter, SIMULATED-labelled) exists | needs upload to YouTube/Vimeo by entrant; re-record with a Test Store key if available |
 | Store launch | not required for Next Gen | n/a |
 | Deadline | Sep 30, 2026 11:45 pm PDT = Oct 1, 2:45 am EDT | aim for 9 pm PDT |
