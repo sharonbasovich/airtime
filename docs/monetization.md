@@ -11,6 +11,16 @@ Measuring stays free, because that's the growth loop (Jump-Off is social and sha
    Optional metadata: `{"headline":"Your baseline is ready","subhead":"…"}`. The app renders it, so paywall copy can change without a release.
 5. Build with `EXPO_PUBLIC_REVENUECAT_API_KEY=test_…` (via a local env var or an EAS secret; never committed).
 
+## Verified end-to-end (2026-09-27)
+A genuine Test Store purchase was run on a debuggable Android build (`EXPO_PUBLIC_REVENUECAT_API_KEY=test_…` via local `.env`, never committed; note the SDK refuses test keys in non-debuggable/release builds, so use a dev/debug APK — or EAS dev build — for this flow). Evidence in `docs/screenshots/`:
+
+- `11-rc-paywall-teststore.png` — paywall rendering live Offering packages (REVENUECAT badge).
+- `11-rc-purchase-teststore.png` — native Test Store purchase sheet, `airtime_pro_annual` $19.99 P1Y.
+- `11-rc-after-teststore.png` — Today screen unlocked to PRO after purchase.
+- `11-rc-panel2-teststore.png` — in-app panel: `entitlements.active.pro` = ACTIVE, `isSandbox` = true, `expirationDate` set; event log: `configure` → `getOfferings` (default, 2 packages) → `purchasePackage $rc_annual` → `CustomerInfo pro=true`.
+
+Repro: `source .env && npx expo prebuild && cd android && ./gradlew assembleDebug`, `adb install app-debug.apk`, `npx expo start --dev-client`, then in-app: Unlock today's call → Start Pro → TEST VALID PURCHASE.
+
 ## SDK moments shown in the demo
 1. `Purchases.configure`, as a line in the in-app SDK event log.
 2. `getOfferings`: packages and prices rendered from the dashboard.

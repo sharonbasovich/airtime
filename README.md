@@ -63,4 +63,5 @@ MIT licensed.
 
 ## Verification status
 - Verified locally: 32/32 unit tests, `expo lint`, `tsc --noEmit`, `expo-doctor` (21/21), a release APK built and run on an Android 15 emulator, and the full golden path (simulated jumps → paywall at baseline → demo purchase → Pro call → RevenueCat panel → Jump-Off).
-- Not yet verified: a live RevenueCat Test Store purchase (needs a `test_…` key), and real-phone sensor jumps.
+- Verified 2026-09-27: a genuine RevenueCat **Test Store** purchase on a debuggable Android build — `entitlements.active.pro` = ACTIVE, `isSandbox` = true. Evidence and repro in [docs/monetization.md](docs/monetization.md) (`docs/screenshots/11-*-teststore.png`).
+- Not yet verified: real-phone sensor jumps.
