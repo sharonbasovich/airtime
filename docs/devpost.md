@@ -5,7 +5,7 @@ Status note (2026-09-27): the Test Store purchase is **done and verified** — o
 ## Eligibility checklist (Next Gen). Full version: docs/eligibility.md
 - [ ] Register and submit with a verifiable academic email: **sbasovic@uwaterloo.ca** (University of Waterloo, CS, class of 2028).
 - [x] Public open-source repo (this repo, MIT).
-- [ ] Demo video (public YouTube/Vimeo, ≤ 2 min): `airtime-demo-v2.mp4` (1:00) shows the genuine Test Store purchase — in this repo's draft GitHub release, ready for entrant upload.
+- [ ] Demo video (public YouTube/Vimeo, ≤ 2 min): `airtime-demo-v2.mp4` (1:00) shows the genuine Test Store purchase — in this repo's draft GitHub release, ready for entrant upload. Judge-facing fallback viewing copy (not a substitute for the required YouTube/Vimeo upload): https://video-nfhqrqwx.devinapps.com/ — same bytes also committed at `docs/video/airtime-demo-v2.mp4`.
 - [x] No store launch required for Next Gen.
 - [ ] Deadline: **Sep 30, 2026 11:45 pm PDT / Oct 1, 2:45 am EDT**. Aim to submit by 9 pm PDT.
 - [ ] Confirm the submission shows "Submitted" on Devpost.
@@ -63,6 +63,8 @@ Airtime was designed and implemented with AI coding agents (Cognition Devin sess
 
 ## Video (what `airtime-demo-v2.mp4` shows, 1:00)
 Fresh install → 7-day baseline loads → SIMULATED-tagged jump → paywall rendering the live `default` Offering → native Test Store purchase sheet (`airtime_pro_annual`, $19.99, P1Y) → `pro` entitlement flips ACTIVE, the daily GO call unlocks → in-app RevenueCat panel (`isSandbox=true`, event log: `configure → getOfferings → purchasePackage → CustomerInfo pro=true`). Captions label the purchase as a sandbox Test Store purchase throughout.
+
+Public fallback (for judges who can't reach the draft release): https://video-nfhqrqwx.devinapps.com/ — the exact same file (SHA-256 `12a0960d8f20fd76804288e0132d7e7c4d6509f91e998ffec7cc3a098736ee9b`), one-line sandbox disclosure, no login. Also committed to this repo at `docs/video/` so GitHub Pages can serve the same page once enabled. This fallback does **not** replace the required public YouTube/Vimeo upload — the entrant still needs to publish it there from their own account.
 
 ## Screenshots for the submission (all 1179×2556, no device frame, real app screens)
 | File | Shows | Honest caption to use |
