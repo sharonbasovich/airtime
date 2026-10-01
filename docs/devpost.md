@@ -5,7 +5,7 @@ Status note (2026-10-01): **submitted and live** — https://devpost.com/softwar
 ## Eligibility checklist (Next Gen). Full version: docs/eligibility.md
 - [x] Registered and submitted with the verifiable academic email: **sbasovic@uwaterloo.ca** (University of Waterloo, CS, class of 2028).
 - [x] Public open-source repo (this repo, MIT).
-- [x] Demo video (public YouTube/Vimeo, ≤ 2 min): the embedded YouTube cut on the entry (`Y5R_76PAS1s`, simulated jumps, sandbox-labelled) fulfils the platform-video requirement. Supplemental: `airtime-demo-v2.mp4` (1:00) shows the genuine Test Store purchase — public at https://video-nfhqrqwx.devinapps.com/index.html, same bytes committed at `docs/video/airtime-demo-v2.mp4` (SHA-256 verified 2026-10-01).
+- [x] Demo video (public YouTube/Vimeo, ≤ 2 min): the YouTube cut embedded on the entry — https://www.youtube.com/shorts/KrHhQpHfgS0 (Unlisted) — shows the genuine Test Store purchase and fulfils the platform-video requirement. Supplemental: `airtime-demo-v2.mp4` (1:00), the same walkthrough — public at https://video-nfhqrqwx.devinapps.com/index.html, same bytes committed at `docs/video/airtime-demo-v2.mp4` (SHA-256 verified 2026-10-01).
 - [x] No store launch required for Next Gen.
 - [x] Deadline: **Oct 1, 2026 12:00 pm PDT / 19:00 UTC** (official rules page, extended) — submitted.
 - [x] Submission shows as live on Devpost: https://devpost.com/software/airtime-xdt0ae
@@ -64,7 +64,7 @@ Airtime was designed and implemented with AI coding agents (Cognition Devin sess
 ## Video (what `airtime-demo-v2.mp4` shows, 1:00)
 Fresh install → 7-day baseline loads → SIMULATED-tagged jump → paywall rendering the live `default` Offering → native Test Store purchase sheet (`airtime_pro_annual`, $19.99, P1Y) → `pro` entitlement flips ACTIVE, the daily GO call unlocks → in-app RevenueCat panel (`isSandbox=true`, event log: `configure → getOfferings → purchasePackage → CustomerInfo pro=true`). Captions label the purchase as a sandbox Test Store purchase throughout.
 
-Public supplemental viewing copy (linked on the Devpost entry): https://video-nfhqrqwx.devinapps.com/index.html — the exact same file (SHA-256 `12a0960d8f20fd76804288e0132d7e7c4d6509f91e998ffec7cc3a098736ee9b`), one-line sandbox disclosure, no login. Also committed to this repo at `docs/video/` so GitHub Pages can serve the same page if enabled. The required platform video is the YouTube cut embedded on the Devpost entry (`https://www.youtube.com/watch?v=Y5R_76PAS1s`, earlier simulated cut); this devinapps page is the supplemental genuine Test Store purchase video, not a replacement.
+Public supplemental viewing copy (linked on the Devpost entry): https://video-nfhqrqwx.devinapps.com/index.html — the exact same file (SHA-256 `12a0960d8f20fd76804288e0132d7e7c4d6509f91e998ffec7cc3a098736ee9b`), one-line sandbox disclosure, no login. Also committed to this repo at `docs/video/` so GitHub Pages can serve the same page if enabled. The required platform video is the YouTube cut embedded on the Devpost entry (https://www.youtube.com/shorts/KrHhQpHfgS0, Unlisted) — the same genuine Test Store sandbox walkthrough; this devinapps page is a supplemental copy, not a replacement.
 
 ## Screenshots for the submission (all 1179×2556, no device frame, real app screens)
 | File | Shows | Honest caption to use |

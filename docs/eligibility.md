@@ -20,7 +20,7 @@ Source: the official Shipaton 2026 rules and FAQ on Devpost (revenuecat-shipaton
 | Public open-source repository | https://github.com/sharonbasovich/airtime (public, MIT detected, `main` @ a25cacc) | done — fresh clone re-verified 2026-10-01: 32/32 tests, lint, tsc clean |
 | App icon 1024×1024 | `assets/icon.png` | done — verified 1024×1024 |
 | Screenshot 1179×2556, no device frame | `docs/screenshots/submit-today-pro-1179x2556.png`, `docs/screenshots/submit-paywall-1179x2556.png` | done — raw `adb screencap` at override size 1179×2556 (no frame, no scaling); other docs images are 1080×2400 |
-| Demo video (public YouTube/Vimeo link) | Embedded YouTube cut on the entry (`Y5R_76PAS1s`, simulated jumps, sandbox-labelled) | done — satisfies the platform-video requirement. The genuine Test Store purchase video (`airtime-demo-v2.mp4`, 1:00, SHA-256 `12a0960d…ee9b`) is a supplemental link on the entry at https://video-nfhqrqwx.devinapps.com/index.html — verified live 2026-10-01, identical bytes. See the media note below |
+| Demo video (public YouTube/Vimeo link) | YouTube cut embedded on the entry (`KrHhQpHfgS0`, genuine Test Store sandbox walkthrough, sandbox-labelled) | done — satisfies the platform-video requirement; Unlisted at https://www.youtube.com/shorts/KrHhQpHfgS0, native embed loads it on the submitted entry. A byte-identical supplemental copy (`airtime-demo-v2.mp4`, 1:00, SHA-256 `12a0960d…ee9b`) is linked at https://video-nfhqrqwx.devinapps.com/index.html — verified live 2026-10-01. See the media note below |
 | Store launch | not required for Next Gen | n/a |
 | Deadline | **Oct 1, 2026 12:00 pm PDT = 19:00 UTC** (official rules page, extended) | submitted before deadline |
 
@@ -28,6 +28,6 @@ Source: the official Shipaton 2026 rules and FAQ on Devpost (revenuecat-shipaton
 Submitted and verified live: https://devpost.com/software/airtime-xdt0ae
 
 ## Media note — which video does what
-- **Required platform video:** the YouTube cut embedded on the Devpost entry (https://www.youtube.com/watch?v=Y5R_76PAS1s) — the earlier simulated cut. It fulfils the YouTube/Vimeo upload requirement.
-- **Supplemental purchase proof:** `airtime-demo-v2.mp4`, hosted publicly at https://video-nfhqrqwx.devinapps.com/index.html (also committed at `docs/video/`). Verified 2026-10-01: the hosted file's SHA-256 is identical to the repo copy. This is the video that shows the genuine Test Store purchase.
+- **Required platform video:** the YouTube cut embedded on the Devpost entry — https://www.youtube.com/shorts/KrHhQpHfgS0 (Unlisted), the genuine Test Store sandbox walkthrough recorded from the debug build. It fulfils the YouTube/Vimeo upload requirement and replaced the earlier simulated cut (`Y5R_76PAS1s`) on 2026-10-01.
+- **Supplemental purchase proof:** `airtime-demo-v2.mp4`, hosted publicly at https://video-nfhqrqwx.devinapps.com/index.html (also committed at `docs/video/`). Verified 2026-10-01: the hosted file's SHA-256 is identical to the repo copy — the same Test Store walkthrough.
 - Keep the wording "Test Store / sandbox" — never imply a real store purchase or real revenue. All jumps are labelled SIMULATED synthetic traces; no physical/on-human validation is claimed anywhere.
