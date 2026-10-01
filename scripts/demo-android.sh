@@ -10,7 +10,21 @@ UI="python3 scripts/adbui.py"
 mkdir -p "$OUT"
 "$ADB" shell pm clear dev.airtime.jump >/dev/null
 "$ADB" shell monkey -p dev.airtime.jump -c android.intent.category.LAUNCHER 1 >/dev/null 2>&1
-sleep 5
+sleep 10
+# Dev-client builds land on a launcher first; tap the discovered dev server if shown,
+# else deep-link into the running bundler.
+$UI "tap:8081" 2>/dev/null || \
+  "$ADB" shell am start -a android.intent.action.VIEW \
+    -d "exp+airtime://expo-development-client/?url=http%3A%2F%2F127.0.0.1%3A8081" >/dev/null
+sleep 20
+$UI "tap:Continue" 2>/dev/null || true   # dismiss the dev-menu sheet if shown
+sleep 1
+# Dismiss the dev-tools screen only if it is actually showing (back would exit the app).
+if "$ADB" shell uiautomator dump /sdcard/ui.xml >/dev/null 2>&1 && \
+   "$ADB" shell cat /sdcard/ui.xml | grep -q "Fast Refresh"; then
+  "$ADB" shell input keyevent 4
+fi
+sleep 1
 $UI shot:"$OUT/01-today-new.png"
 # Jump-Off (free): two simulated players
 $UI "tap:Jump-Off" sleep:1 "tap:jumpoff-name" type:Sharon back sleep:0.7 "tap:Sim · fresh" sleep:4.5 "tap:jumpoff-name"

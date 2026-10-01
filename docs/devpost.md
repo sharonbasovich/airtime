@@ -1,14 +1,14 @@
 # Devpost submission kit: Airtime (Shipaton 2026, Next Gen)
 
-Status note (2026-09-27): the Test Store purchase is **done and verified** — on-device `entitlements.active.pro` = ACTIVE with `isSandbox` = true, and the transaction appears in the RevenueCat dashboard customer profile. Anything below describing an unverified/demo purchase is obsolete; this file replaces it.
+Status note (2026-10-01): **submitted and live** — https://devpost.com/software/airtime-xdt0ae. The Test Store purchase is done and verified — on-device `entitlements.active.pro` = ACTIVE with `isSandbox` = true, and the transaction appears in the RevenueCat dashboard customer profile. Anything below describing an unverified/demo purchase is obsolete; this file replaces it.
 
 ## Eligibility checklist (Next Gen). Full version: docs/eligibility.md
-- [ ] Register and submit with a verifiable academic email: **sbasovic@uwaterloo.ca** (University of Waterloo, CS, class of 2028).
+- [x] Registered and submitted with the verifiable academic email: **sbasovic@uwaterloo.ca** (University of Waterloo, CS, class of 2028).
 - [x] Public open-source repo (this repo, MIT).
-- [ ] Demo video (public YouTube/Vimeo, ≤ 2 min): `airtime-demo-v2.mp4` (1:00) shows the genuine Test Store purchase — in this repo's draft GitHub release, ready for entrant upload. Judge-facing fallback viewing copy (not a substitute for the required YouTube/Vimeo upload): https://video-nfhqrqwx.devinapps.com/ — same bytes also committed at `docs/video/airtime-demo-v2.mp4`.
+- [x] Demo video (public, ≤ 2 min): `airtime-demo-v2.mp4` (1:00) shows the genuine Test Store purchase — public at https://video-nfhqrqwx.devinapps.com/index.html, same bytes committed at `docs/video/airtime-demo-v2.mp4` (SHA-256 verified 2026-10-01). The YouTube embed on the Devpost entry (`Y5R_76PAS1s`) is the earlier simulated cut; the genuine purchase video is the linked devinapps page.
 - [x] No store launch required for Next Gen.
-- [ ] Deadline: **Sep 30, 2026 11:45 pm PDT / Oct 1, 2:45 am EDT**. Aim to submit by 9 pm PDT.
-- [ ] Confirm the submission shows "Submitted" on Devpost.
+- [x] Deadline: **Sep 30, 2026 11:45 pm PDT / Oct 1, 2:45 am EDT** — submitted.
+- [x] Submission shows as live on Devpost: https://devpost.com/software/airtime-xdt0ae
 
 ## Tagline
 The 10-second daily readiness jump: your phone tells you whether to go hard, go easy, or rest.
@@ -64,7 +64,7 @@ Airtime was designed and implemented with AI coding agents (Cognition Devin sess
 ## Video (what `airtime-demo-v2.mp4` shows, 1:00)
 Fresh install → 7-day baseline loads → SIMULATED-tagged jump → paywall rendering the live `default` Offering → native Test Store purchase sheet (`airtime_pro_annual`, $19.99, P1Y) → `pro` entitlement flips ACTIVE, the daily GO call unlocks → in-app RevenueCat panel (`isSandbox=true`, event log: `configure → getOfferings → purchasePackage → CustomerInfo pro=true`). Captions label the purchase as a sandbox Test Store purchase throughout.
 
-Public fallback (for judges who can't reach the draft release): https://video-nfhqrqwx.devinapps.com/ — the exact same file (SHA-256 `12a0960d8f20fd76804288e0132d7e7c4d6509f91e998ffec7cc3a098736ee9b`), one-line sandbox disclosure, no login. Also committed to this repo at `docs/video/` so GitHub Pages can serve the same page once enabled. This fallback does **not** replace the required public YouTube/Vimeo upload — the entrant still needs to publish it there from their own account.
+Public viewing copy (linked on the Devpost entry): https://video-nfhqrqwx.devinapps.com/index.html — the exact same file (SHA-256 `12a0960d8f20fd76804288e0132d7e7c4d6509f91e998ffec7cc3a098736ee9b`), one-line sandbox disclosure, no login. Also committed to this repo at `docs/video/` so GitHub Pages can serve the same page if enabled. Note: the YouTube video embedded on the Devpost entry (`https://www.youtube.com/watch?v=Y5R_76PAS1s`) is the earlier simulated cut — the genuine Test Store purchase video is the devinapps page.
 
 ## Screenshots for the submission (all 1179×2556, no device frame, real app screens)
 | File | Shows | Honest caption to use |
@@ -80,4 +80,4 @@ Best single proof-of-purchase shot: `11-rc-panel2-teststore.png` — it shows AC
 ## Do NOT
 - Don't describe the purchase as real revenue or a live store transaction — say "RevenueCat Test Store (sandbox)".
 - Don't commit the `test_…` API key or any `.env`; it lives only in the local build environment.
-- Don't press Submit or accept terms until Sharon confirms at submission time.
+- Don't describe the Devpost-embedded YouTube cut as the purchase video — the genuine Test Store purchase demo is the devinapps page (`airtime-demo-v2.mp4`).
